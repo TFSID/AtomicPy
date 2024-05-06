@@ -1,0 +1,9 @@
+services:
+  atomic-py:
+    image: atomic-py
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    container_name: atomic-py
+    ports:
+      - "8625:8625"

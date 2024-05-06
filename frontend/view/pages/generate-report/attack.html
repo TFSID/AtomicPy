@@ -1,0 +1,157 @@
+<div class="page-wrapper">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="page-breadcrumb">
+          <div class="row">
+            <div class="col-12 d-flex no-block align-items-center">
+              <h4 class="page-title">Dashboard</h4>
+              <div class="ms-auto text-end">
+              </div>
+            </div>
+          </div>
+        </div>
+        <h2>Pilih File untuk Diunduh:</h2>
+        <!-- Dropdown untuk memilih file -->
+        <select id="fileDropdown">
+         <option value="file1.pdf">Download CSV</option>
+          <option value="file2.zip">Download Parsed Data</option>
+  <!-- Tambahkan opsi lain jika diperlukan -->
+        </select>
+
+        <!-- Tombol untuk memulai unduhan -->
+        <button onclick="downloadFile()">Unduh File</button>
+
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="d-md-flex align-items-center">
+                  <div>
+                    <h4 class="card-title">Data Attack Report</h4>
+                    <h5 class="card-subtitle">Overview of last 8 Hour</h5>
+                  </div>
+                </div>
+                <div class="row">
+                  <!-- column -->
+                  <div class="col-md-6">
+                      <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Line Chart</h5>
+                          <div class="bars" style="height: 400px; padding: 0px; position: relative;"><canvas class="flot-base" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 458px; height: 400px;" width="458" height="400"></canvas><div class="flot-text" style="position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; inset: 0px;"><div style="position: absolute; max-width: 65px; top: 381px; left: 18px; text-align: center;" class="flot-tick-label tickLabel">0</div><div style="position: absolute; max-width: 65px; top: 381px; left: 100px; text-align: center;" class="flot-tick-label tickLabel">2</div><div style="position: absolute; max-width: 65px; top: 381px; left: 183px; text-align: center;" class="flot-tick-label tickLabel">4</div><div style="position: absolute; max-width: 65px; top: 381px; left: 265px; text-align: center;" class="flot-tick-label tickLabel">6</div><div style="position: absolute; max-width: 65px; top: 381px; left: 348px; text-align: center;" class="flot-tick-label tickLabel">8</div><div style="position: absolute; max-width: 65px; top: 381px; left: 427px; text-align: center;" class="flot-tick-label tickLabel">10</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; inset: 0px;"><div style="position: absolute; top: 366px; left: 9px; text-align: right;" class="flot-tick-label tickLabel">0</div><div style="position: absolute; top: 305px; left: 9px; text-align: right;" class="flot-tick-label tickLabel">5</div><div style="position: absolute; top: 244px; left: 2px; text-align: right;" class="flot-tick-label tickLabel">10</div><div style="position: absolute; top: 183px; left: 2px; text-align: right;" class="flot-tick-label tickLabel">15</div><div style="position: absolute; top: 122px; left: 2px; text-align: right;" class="flot-tick-label tickLabel">20</div><div style="position: absolute; top: 61px; left: 2px; text-align: right;" class="flot-tick-label tickLabel">25</div><div style="position: absolute; top: 0px; left: 2px; text-align: right;" class="flot-tick-label tickLabel">30</div></div></div><canvas class="flot-overlay" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 458px; height: 400px;" width="458" height="400"></canvas></div>
+                        </div>
+                      </div>
+                    </div>
+                  <div class="col-lg-3">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="bg-dark p-10 text-white text-center">
+                          <i class="fas fa-arrow-circle-up fs-3 mb-1 font-16"></i>
+                          <h5 class="mb-0 mt-1">2540</h5>
+                          <small class="font-light">Total Source</small>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="bg-dark p-10 text-white text-center">
+                          <i class="fas fa-arrow-alt-circle-down  fs-3 mb-1 font-16"></i>
+                          <h5 class="mb-0 mt-1">120</h5>
+                          <small class="font-light">Total Destination</small>
+                        </div>
+                      </div>
+                      <div class="col-6 mt-3">
+                        <div class="bg-dark p-10 text-white text-center">
+                          <i class="fas fa-code fs-3 mb-1 font-16"></i>
+                          <h5 class="mb-0 mt-1">656</h5>
+                          <small class="font-light">Total Request</small>
+                        </div>
+                      </div>
+                      <div class="col-6 mt-3">
+                        <div class="bg-dark p-10 text-white text-center">
+                          <i class=" fas fa-bolt fs-3 mb-1 font-16"></i>
+                          <h5 class="mb-0 mt-1">9540</h5>
+                          <small class="font-light">Total Attack</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Here The Table</h5>
+                    </div>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">SourceIP</th>
+                          <th scope="col">DestinationIP</th>
+                          <th scope="col">Request</th>
+                          <th scope="col">Total Attack</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td> 
+                            <!--
+                              Insert Backend Here
+                            -->
+                          </td>
+                        </tr>
+                      </tbody>
+                  <script>
+                    function downloadFile() {
+                      // Mendapatkan nilai terpilih dari dropdown
+                      var selectedFile = document.getElementById("fileDropdown").value;
+                      
+                      // Membuat link untuk mengunduh file
+                      var downloadLink = document.createElement("a");
+                      downloadLink.href = selectedFile;
+                      
+                      // Mengatur atribut untuk mengunduh file
+                      downloadLink.download = selectedFile;
+                      
+                      // Mengklik link untuk memulai unduhan
+                      downloadLink.click();
+                    }
+                    </script>
+       <!-- <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+       <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+       <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+       <script src="../assets/extra-libs/sparkline/sparkline.js"></script>
+       <script src="../dist/js/waves.js"></script>
+       <script src="../dist/js/sidebarmenu.js"></script>
+       <script src="../dist/js/custom.min.js"></script>
+       <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+       <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+       <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+       <script src="../assets/extra-libs/sparkline/sparkline.js"></script>
+       <script src="../dist/js/waves.js"></script>
+       <script src="../dist/js/sidebarmenu.js"></script>
+       <script src="../dist/js/custom.min.js"></script>
+       <script src="../assets/libs/flot/excanvas.js"></script>
+       <script src="../assets/libs/flot/jquery.flot.js"></script>
+       <script src="../assets/libs/flot/jquery.flot.pie.js"></script>
+       <script src="../assets/libs/flot/jquery.flot.time.js"></script>
+       <script src="../assets/libs/flot/jquery.flot.stack.js"></script>
+       <script src="../assets/libs/flot/jquery.flot.crosshair.js"></script>
+       <script src="../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+       <script src="../dist/js/pages/chart/chart-page-init.js"></script>
+       <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+       <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+       <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+       <script src="../assets/extra-libs/sparkline/sparkline.js"></script>
+       <script src="../dist/js/waves.js"></script>
+       <script src="../dist/js/sidebarmenu.js"></script>
+       <script src="../dist/js/custom.min.js"></script>
+       <script src="../assets/libs/chart/matrix.interface.js"></script>
+       <script src="../assets/libs/chart/excanvas.min.js"></script>
+       <script src="../assets/libs/flot/jquery.flot.js"></script>
+       <script src="../assets/libs/flot/jquery.flot.pie.js"></script>
+       <script src="../assets/libs/flot/jquery.flot.time.js"></script>
+       <script src="../assets/libs/flot/jquery.flot.stack.js"></script>
+       <script src="../assets/libs/flot/jquery.flot.crosshair.js"></script>
+       <script src="../assets/libs/chart/jquery.peity.min.js"></script>
+       <script src="../assets/libs/chart/matrix.charts.js"></script>
+       <script src="../assets/libs/chart/jquery.flot.pie.min.js"></script>
+       <script src="../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+       <script src="../assets/libs/chart/turning-series.js"></script>
+       <script src="../dist/js/pages/chart/chart-page-init.js"></script> -->
+</table></div></div></div></div></div></div></div>
